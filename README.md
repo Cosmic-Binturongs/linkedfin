@@ -1,1 +1,3 @@
 # LinkedFin
+
+## Entity Relationship Diagram
