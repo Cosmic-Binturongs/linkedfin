@@ -29,5 +29,3 @@
 ## Feed
 
 ![feed](./wireframe/feed.png)
-
-
