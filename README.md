@@ -2,11 +2,17 @@
 
 # Entity Relationship Diagram
 
-![ERD](./erdlinkfin.jpeg)
+![ERD](./images/erdlinkfin.jpeg)
 
 # Wireframe
 
-[Interactive wireframe]()
+[Interactive wireframe](https://www.figma.com/file/g2vILOWXtLA8LL4xpOnG7x/Linkedfin?node-id=0%3A1)
+
+## Style sheet
+
+[Style-sheet](https://www.figma.com/file/Yl85Rf3zgYZ704P0kpAFFo/Linkedfin-stylesheet?node-id=0%3A1)
+
+![Style sheet](./wireframe/Linkedfin-stylesheet.png)
 
 ## Landing Page/sign Up
 
