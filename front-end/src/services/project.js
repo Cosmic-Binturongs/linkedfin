@@ -16,7 +16,7 @@ catch(err){
 
 //get single project
 
-export const getSingleProject = async(id) => { 
+export const getSingleProject = async (id) => { 
     try{ 
         const data = api.get(`endpoint/:${id}`)
         return data
