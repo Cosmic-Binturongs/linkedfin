@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
     'project',
     'user_profile',
 ]
@@ -80,8 +80,10 @@ WSGI_APPLICATION = 'linkedfin_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'linkfin',
+        'HOST': 'localhost',
+        'PASSWORD': 'password'
     }
 }
 
