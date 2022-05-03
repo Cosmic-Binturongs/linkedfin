@@ -1,17 +1,19 @@
-import axios from axios; 
+import axios from "axios";
 
-let api = null; 
+let apiUrl;
 
-const productionUrl = "http//heroku.com"
-const localUrl = "http//localhost:3000"
+let productionURL = "heroku/app";
+let developmentURL = "http://localhost:3000";
 
-function apiCheck(){
-    if ( window.location.host === "localhost"){ 
-        api = localUrl
-    }else {
-        api = productionUrl
-    }
+if (location.hostname == "127.0.0.1" || location.hostname == "localhost") {
+  apiUrl = productionURL;
+} else {
+  apiUrl = developmentURL;
 }
 
-apiCheck(); 
+const api = axios.create({
+  baseURL: apiUrl,
+  timeout: 2000,
+});
 
+export default api;

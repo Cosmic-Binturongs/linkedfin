@@ -2,4 +2,4 @@
 
 ## Entity Relationship Diagram
 
-![ERD](./erdlinkfin.jpeg)
+![ERD](./images/erdlinkfin.jpeg)
