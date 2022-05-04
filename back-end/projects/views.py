@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from user_profile.models import User_profile
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect
-
+from .serializers import UserSerializer
 
 @method_decorator(csrf_protect, name="dispatch")
 class CheckAuthenticatedView(APIView):
