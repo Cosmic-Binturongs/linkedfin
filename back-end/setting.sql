@@ -4,8 +4,6 @@ In your terminal (root of backend) run the following:
 Replace DB_NAME, DB_USER, DB_PASSWORD
 With values in .env
 */
-import os
-from dotenv import load_dotenv
 
 
 CREATE DATABASE linkfin;
