@@ -10,4 +10,4 @@ class User_profile(models.Model):
     user_id = models.OneToOneField(User, on_delete=models.CASCADE, null=False)
 
     def __str__(self):
-        return self.user.name
+        return self.user_id.username
