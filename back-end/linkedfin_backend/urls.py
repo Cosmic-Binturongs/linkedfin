@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api_auth/', include('rest_framework.urls')),
-    path('accounts/', include('project.urls')),
-    path('profile/', include('user_profile.urls'))
+    path('accounts/', include('projects.urls')),
+    # path('profile/', include('user_profile.urls'))
 ]
 
 # Add regular expression for catch-all
