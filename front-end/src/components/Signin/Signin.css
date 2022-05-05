@@ -1,11 +1,11 @@
 .signinContainer{
    
-margin-top: 1vh;
+margin-top: 10vh;
 justify-content: center;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
-height: 60vh;
+height: 55vh;
 width: 60vh;
 color: white;
 background-color: rgb(145, 225, 245);
@@ -30,6 +30,7 @@ justify-content: center;
 }
 
 .topText{
+  margin-top: 55px;
   font-family: Helvetica-Bold;
   color:#2a9df4
 }
