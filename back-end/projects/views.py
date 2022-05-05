@@ -59,11 +59,11 @@ class SignupView(APIView):
 
     def post(self, request, format=None):
         data = self.request.data
-
+        
         username = data['username']
         password = data['password']
         re_password = data['re_password']
-
+   
         try:
             if password == re_password:
                 if User.objects.filter(username=username).exists():
@@ -73,13 +73,11 @@ class SignupView(APIView):
                         return Response({"error": "Password must be at least 6 characters"})
                     else:
                         user = User.objects.create_user(
-                            username=username, password=password)
+                            username=data['username'], password=data['password'])
                         user.save()
-
-                        user = User.objects.get(id=user.id)
-
-                        user_profile = User_profile(
-                            user=user, bio="", github="", image="")
+                        user_account = User.objects.get(id=user.id)
+                        user_profile = User_profile.objects.create(
+                            user_id=user_account)
                         user_profile.save()
 
                         return Response({'success': 'User created successfully!'})
@@ -96,7 +94,7 @@ class GetCSRFToken(APIView):
     def get(self, request, format=None):
         return Response({'success': 'CSRF cookie set'})
 
-class DeleteAccountView(APIView):
+class DeleteProjectView(APIView):
     def delete(self, request, format=None):
         user = self.request.user
 
@@ -118,4 +116,3 @@ class GetUsersView(APIView):
         return Response(users.data)
 
 
-##testing 
