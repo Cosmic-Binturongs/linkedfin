@@ -5,7 +5,7 @@ import SignIn from "./screens/SignIn.jsx";
 function App() {
   return (
     <div className="app">
-     <SignIn></SignIn>
+     <Landing />
     </div>
   );
 }
