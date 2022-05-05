@@ -1,0 +1,36 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #2A9DF4;
+  height: 6rem;
+  justify-content: space-evenly;
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-logo-text {
+  color: #2A9DF4;
+}
+
+.nav-logo-img {
+  width: 100px;
+  height: 100px;
+
+}
+
+button {
+  box-sizing: border-box;
+  width: 50%;
+  height: 35%;
+  color: #2A9DF4;
+  background: #FFFFFF;
+  border: 2px solid #2A9DF4;
+  border-radius: 30px;
+}
