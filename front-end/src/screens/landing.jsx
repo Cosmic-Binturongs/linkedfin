@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import img from "../images/istock.jpeg";
+import img from "../images/Landing_image.png";
 import "../style/landing.css";
 
 const Section = styled.section`
@@ -33,6 +33,9 @@ const Button = styled(motion.button)`
   height: 3em;
   border-radius: 15px;
   border-color: blue;
+  background: linear-gradient(to right, lightblue 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
 `;
 
 function Landing() {
@@ -94,6 +97,8 @@ function Landing() {
               transition={{ duration: 1 }}
             ></motion.input>
             <Button
+              className="signup-button"
+              whileHover={{ scale: 1.2 }}
               variants={slowFade5}
               initial="hidden"
               animate="visible"

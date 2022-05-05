@@ -34,4 +34,8 @@
   margin-bottom: 1.3em;
   word-spacing: 0.2em;
 }
+.signup-button:hover {
+  background-position: left bottom;
+  transition: ease-out 0.3s;
+}
 /* END..STYLING FOR LANDING PAGE*/
