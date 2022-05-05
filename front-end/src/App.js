@@ -1,11 +1,12 @@
-
-import './App.css';
-import Signin from './components/Signin/Signin.js';
-
-
+import "./App.css";
+import Landing from "./screens/landing.jsx";
+import styled from "styled-components";
+import SignIn from "./screens/SignIn.jsx";
 function App() {
   return (
-    <div><Signin></Signin></div>
+    <div className="app">
+     <SignIn></SignIn>
+    </div>
   );
 }
 
