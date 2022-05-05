@@ -1,9 +1,11 @@
-
-import './App.css';
-
+import "./App.css";
+import Landing from "./screens/landing.jsx";
+import styled from "styled-components";
 function App() {
   return (
-    <div><h1>test</h1></div>
+    <div className="app">
+      <Landing />
+    </div>
   );
 }
 
