@@ -1,19 +1,17 @@
 import axios from "axios";
 
-let apiUrl;
-
-let productionURL = "heroku/app";
-let developmentURL = "http://localhost:3000";
-
-if (location.hostname == "127.0.0.1" || location.hostname == "localhost") {
-  apiUrl = productionURL;
-} else {
-  apiUrl = developmentURL;
-}
 
 const api = axios.create({
-  baseURL: apiUrl,
-  timeout: 2000,
+  baseURL: "http://localhost:8000",
 });
+
+//api.interceptors.request.use(async function (config){
+    //config.headers['Authorization'] = await getToken()
+    //return config
+ //},function (error) {
+    //  console.log('Request error: ', error)
+    // return Promise.reject(error)
+//});
+
 
 export default api;
