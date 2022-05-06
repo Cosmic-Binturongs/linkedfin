@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import CSRFToken from "../components/CSRFToken";
 import Cookies from "js-cookie";
 
-function Signin({ isAuthenticated, setIsAuthenticated, setUser }) {
+function SignIn({ isAuthenticated, setIsAuthenticated, setUser }) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -97,4 +97,4 @@ function Signin({ isAuthenticated, setIsAuthenticated, setUser }) {
   );
 }
 
-export default Signin;
+export default SignIn;

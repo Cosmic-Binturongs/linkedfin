@@ -85,7 +85,7 @@ function Landing({ isAuthenticated }) {
     }
   };
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/profile" replace />;
   } else if (accountCreated) {
     return <Navigate to="/signin" replace />;
   }
@@ -213,5 +213,3 @@ function Landing({ isAuthenticated }) {
 }
 
 export default Landing;
-
-/* needs a navbar*/
