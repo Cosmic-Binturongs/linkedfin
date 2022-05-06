@@ -17,7 +17,7 @@ export default function Navbar() {
     console.log(e.target.innerText)
     const click = e.target.innerText
     if (click == "Sign In") {
-      navigate('/profile')
+      navigate('/signin')
       setbtnSignin(false)
       setbtnSignout(true)
       setbtnMyProfile(true)

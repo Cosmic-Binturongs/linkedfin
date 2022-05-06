@@ -1,17 +1,6 @@
-import React from "react";
-import Navbar from "../components/navbar/Navbar";
-import Signin from "../components/Signin/Signin";
-import styled from "styled-components";
-
-const Section = styled.section`
-  height: 100vh;
-  display: flex;
-`;
-
+import React from 'react'
+import Signin from '../components/Signin/Signin'
 export default function SignIn() {
   return (
-    <Section>
-      <SignIn>HI</SignIn>
-    </Section>
-  );
-}
+    <div><Signin></Signin></div>
+  )
