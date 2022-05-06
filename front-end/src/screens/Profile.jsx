@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import ProfileComp from "../components/ProfileComp/ProfileComp";
 import AddProjModal from "../components/AddProjModal/AddProjModal";
-import './Profile.css'
+import "./Profile.css";
 
 function Profile() {
   const [showModal, setShowModal] = useState(false)
@@ -25,7 +25,7 @@ function Profile() {
 
 
     </div>
-  )
+  );
 }
 
-export default Profile
+export default Profile;
