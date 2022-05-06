@@ -12,9 +12,10 @@ urlpatterns = [
     path('accounts/logout', LogoutView.as_view()),
     path('accounts/delete', DeleteProjectView.as_view()),
     path('accounts/csrf_cookie', GetCSRFToken.as_view()),
-    path('accounts/get_users', GetUsersView.as_view()),
-    
-    # path('projects', ProjectViewSet.as)
-
+    path('accounts/get_users', GetUsersView.as_view())
 ]
+
+router = routers.DefaultRouter()
+router.register('projects', ProjectViewSet, 'projects')
+
 urlpatterns += router.urls
