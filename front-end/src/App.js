@@ -1,9 +1,8 @@
 import "./App.css";
 import Landing from "./screens/landing.jsx";
 import Profile from "./screens/Profile.jsx";
-import SignIn from "./screens/Signin.jsx";
+import SignIn from "./screens/SignIn.jsx";
 import Feed from "./screens/Feed.jsx";
-
 import styled from "styled-components";
 import Navbar from "./components/navbar/Navbar.jsx";
 import { Routes, Route } from "react-router-dom";

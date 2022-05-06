@@ -20,8 +20,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api_auth/', include('rest_framework.urls')),
-    path('accounts/', include('projects.urls')),
-    path('profile/', include('user_profile.urls'))
+    path('profile/', include('user_profile.urls')),
+    path('', include('projects.urls'))
 ]
 
 # Add regular expression for catch-all
