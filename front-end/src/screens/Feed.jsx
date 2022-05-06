@@ -1,5 +1,5 @@
-import ProfileComp from '../components/ProfileComp/ProfileComp.jsx
-'
+import ProfileComp from '../components/ProfileComp/ProfileComp.jsx'
+
 export default function Feed() {
 
   return (
