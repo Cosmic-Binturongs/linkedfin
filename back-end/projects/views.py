@@ -1,12 +1,13 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import permissions
+from rest_framework import permissions, viewsets
 from django.contrib import auth
 from django.contrib.auth.models import User
 from user_profile.models import User_profile
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect
-from .serializers import UserSerializer
+from .serializers import UserSerializer, ProjectSerializer
+from .models import Project
 
 @method_decorator(csrf_protect, name="dispatch")
 class CheckAuthenticatedView(APIView):
@@ -116,3 +117,7 @@ class GetUsersView(APIView):
         return Response(users.data)
 
 
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
