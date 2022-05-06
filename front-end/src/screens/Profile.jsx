@@ -6,7 +6,7 @@ import './Profile.css'
 
 function Profile() {
   const [showModal, setShowModal] = useState(false)
-
+ // using dummy data to test functionality
   const [profile, setProfile] = useState({
     bio: "I am a software engineer working for evilcorp",
     github: "https://www.linkedin.com/",
