@@ -1,7 +1,12 @@
-import React from 'react'
-
 export default function Feed() {
   return (
-    <div>Feed Page Test</div>
+    <div className='feed-container'>
+      <div className='projects-container'>
+        <ProfileComp />
+      </div>
+      <div className='sidebar-container'>
+        <Sidebar />
+      </div>
+    </div>
   )
 }
