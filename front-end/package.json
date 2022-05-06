@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "framer-motion": "^6.2.10",
+    "js-cookie": "^3.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
@@ -17,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf ../back-end/build && react-scripts build && cp -r build ../back-end/build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

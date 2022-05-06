@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import img from "../images/Landing_image.png";
 import "../style/landing.css";
-
+import CSRFToken from "../components/CSRFToken";
+import { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { register } from "../services/auth";
 const Section = styled.section`
   height: 100vh;
   display: flex;
@@ -38,7 +41,43 @@ const Button = styled(motion.button)`
   background-position: right bottom;
 `;
 
-function Landing() {
+function Landing({ isAuthenticated }) {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    re_password: "",
+  });
+
+  const [accountCreated, setAccountCreated] = useState(false);
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    console.log(name);
+    console.log(value);
+    console.log(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const { password, re_password } = formData;
+
+    if (password === re_password) {
+      register(formData);
+      setAccountCreated(true);
+    }
+  };
+
+  //   if (isAuthenticated) {
+  //     return <Navigate to="/dashboard" replace />;
+  //   } else if (accountCreated) {
+  //     return <Navigate to="/login" replace />;
+  //   }
+
   const slowFade = {
     hidden: { opacity: 0, y: -35 },
     visible: { opacity: 1, y: 0 },
@@ -64,48 +103,68 @@ function Landing() {
       <Container>
         <ColumnLeft>
           <div className="input-container">
-            <motion.input
-              placeholder="Full Name"
-              className="landing-input"
-              variants={slowFade}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1 }}
-            ></motion.input>
-            <motion.input
-              placeholder=" Email"
-              className="landing-input"
-              variants={slowFade2}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1 }}
-            ></motion.input>
-            <motion.input
-              placeholder="Password"
-              className="landing-input"
-              variants={slowFade3}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1 }}
-            ></motion.input>
-            <motion.input
-              placeholder="Confirm Password"
-              className="landing-input"
-              variants={slowFade4}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1 }}
-            ></motion.input>
-            <Button
-              className="signup-button"
-              whileHover={{ scale: 1.2 }}
-              variants={slowFade5}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1 }}
-            >
-              Sign Up
-            </Button>
+            <form onSubmit={handleSubmit}>
+              <CSRFToken />
+              <motion.input
+                placeholder="Full Name"
+                className="landing-input"
+                variants={slowFade}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+                name="username"
+                onChange={handleChange}
+                value={formData.username}
+                required
+              ></motion.input>
+              <motion.input
+                placeholder=" Email"
+                className="landing-input"
+                variants={slowFade2}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+
+                // onChange={handleChange}
+                // value={formData.username}
+                // required
+              ></motion.input>
+              <motion.input
+                placeholder="Password"
+                className="landing-input"
+                variants={slowFade3}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+                name="password"
+                onChange={handleChange}
+                value={formData.password}
+                required
+              ></motion.input>
+              <motion.input
+                placeholder="Confirm Password"
+                className="landing-input"
+                variants={slowFade4}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+                name={"re_password"}
+                onChange={handleChange}
+                value={formData.re_password}
+                required
+              ></motion.input>
+              <Button
+                className="signup-button"
+                whileHover={{ scale: 1.2 }}
+                variants={slowFade5}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+                type="submit"
+              >
+                Sign Up
+              </Button>
+            </form>
           </div>
         </ColumnLeft>
         <ColumnRight>
