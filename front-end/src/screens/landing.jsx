@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { register } from "../services/auth";
 import Cookies from "js-cookie";
+
 const Section = styled.section`
   height: 100vh;
   display: flex;

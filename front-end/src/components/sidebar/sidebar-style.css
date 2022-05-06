@@ -1,0 +1,22 @@
+.sidebar-container {
+  display: flex;
+  width: 20vw;
+}
+
+.sidebar-card {
+  width: 20vw;
+  height: 10vh;
+  display: flex;
+}
+
+.sidebar-image {
+  width: 15vw;
+  height: 15vh;
+  border-radius: 50%;
+}
+
+.sidebar-name-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
