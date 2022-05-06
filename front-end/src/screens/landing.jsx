@@ -7,6 +7,7 @@ import CSRFToken from "../components/CSRFToken";
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { register } from "../services/auth";
+import Cookies from "js-cookie";
 const Section = styled.section`
   height: 100vh;
   display: flex;
@@ -56,9 +57,6 @@ function Landing({ isAuthenticated }) {
       ...formData,
       [name]: value,
     });
-    console.log(name);
-    console.log(value);
-    console.log(e.target.value);
   };
 
   const handleSubmit = e => {
@@ -67,16 +65,30 @@ function Landing({ isAuthenticated }) {
     const { password, re_password } = formData;
 
     if (password === re_password) {
-      register(formData);
-      setAccountCreated(true);
+      let options = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "X-CSRFToken": Cookies.get("csrftoken"),
+        },
+        credentials: "include",
+        body: JSON.stringify(formData),
+      };
+
+      fetch("http://localhost:8000/accounts/register", options).then(
+        response => {
+          console.log(response);
+          setAccountCreated(true);
+        }
+      );
     }
   };
-
-  //   if (isAuthenticated) {
-  //     return <Navigate to="/dashboard" replace />;
-  //   } else if (accountCreated) {
-  //     return <Navigate to="/login" replace />;
-  //   }
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" replace />;
+  } else if (accountCreated) {
+    return <Navigate to="/signin" replace />;
+  }
 
   const slowFade = {
     hidden: { opacity: 0, y: -35 },

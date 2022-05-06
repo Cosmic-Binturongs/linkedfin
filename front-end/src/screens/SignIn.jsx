@@ -1,6 +1,9 @@
-import React from 'react'
-import Signin from '../components/Signin/Signin'
+import React from "react";
+import Signin from "../components/Signin/Signin";
 export default function SignIn() {
   return (
-    <div><Signin></Signin></div>
-  )
+    <div>
+      <Signin></Signin>
+    </div>
+  );
+}

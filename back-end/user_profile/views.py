@@ -25,6 +25,7 @@ class GetUserProfileView(APIView):
       #admin name
       current_user = User.objects.get(id= user.id)
       user_profileval = User_profile.objects.get(user_id = user)
+
       user_profile = ProfileSerializer(user_profileval)
 
       return Response({'profile': user_profile.data, 'username': str(username)})
@@ -45,7 +46,7 @@ class UpdateUserProfileView(APIView):
 
       current_user = User.objects.get( id = user.id)
       
-      updatedProfile = User_profile.objects.filter(user_id = current_user).update(bio=data['bio'], github=data['github'], image='')
+      updatedProfile = User_profile.objects.filter(user_id = current_user).update(bio=data['bio'], github=data['github'], image=['image'])
       user_profileval = User_profile.objects.get(user_id = user)
       user_profile = ProfileSerializer(user_profileval)
       return Response({'profile': user_profile.data, 'username': str(username)})
