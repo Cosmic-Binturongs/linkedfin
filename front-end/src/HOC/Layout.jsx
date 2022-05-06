@@ -10,13 +10,46 @@ export default function Layout({
   setUser,
 }) {
   useEffect(() => {
-    const checkAuth = async () => {
-      const response = await checkAuthenticated();
-      setIsAuthenticated(response);
-      const userData = await load_user();
-      setUser(userData);
+    let options = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
     };
-    checkAuth();
+
+    let userOptions = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    };
+
+    fetch("http://localhost:8000/accounts/authenticated", options)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        if (data.error || data.isAuthenticated === "error") {
+          setIsAuthenticated(false);
+        } else if (data.isAuthenticated === "success") {
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+        }
+
+        fetch("http://localhost:8000/profile/user", userOptions)
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            setUser(data);
+          });
+      });
   }, []);
 
   return (

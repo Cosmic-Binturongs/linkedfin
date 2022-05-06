@@ -1,7 +1,7 @@
 import "./App.css";
 import Landing from "./screens/landing.jsx";
 import Profile from "./screens/Profile.jsx";
-import SignIn from "./screens/SignIn.jsx";
+import SignIn from "./screens/Signin.jsx";
 import Feed from "./screens/Feed.jsx";
 
 import styled from "styled-components";
@@ -29,7 +29,16 @@ function App() {
           />
           <Route path="/profile" element={<Profile />} />
           <Route path="/feed" element={<Feed />} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route
+            path="/signin"
+            element={
+              <SignIn
+                isAuthenticated={isAuthenticated}
+                setIsAuthenticated={setIsAuthenticated}
+                setUser={setUser}
+              />
+            }
+          />
         </Routes>
       </Layout>
     </div>
