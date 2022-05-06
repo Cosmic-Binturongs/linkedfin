@@ -2,7 +2,8 @@ from .views import SignupView, GetCSRFToken, LoginView, LogoutView, CheckAuthent
 from rest_framework import routers
 from django.urls import path, include
 
-
+router= routers.DefaultRouter()
+router.register(r'project', ProjectViewSet)
 
 urlpatterns = [
     path('accounts/authenticated', CheckAuthenticatedView.as_view()),
@@ -11,7 +12,10 @@ urlpatterns = [
     path('accounts/logout', LogoutView.as_view()),
     path('accounts/delete', DeleteProjectView.as_view()),
     path('accounts/csrf_cookie', GetCSRFToken.as_view()),
-    path('accounts/get_users', GetUsersView.as_view()),
-    path('projects',ProjectViewSet.as_view())
-
+    path('accounts/get_users', GetUsersView.as_view())
 ]
+
+router = routers.DefaultRouter()
+router.register('projects', ProjectViewSet, 'projects')
+
+urlpatterns += router.urls
