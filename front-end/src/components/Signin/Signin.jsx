@@ -55,7 +55,7 @@ function Signin({ isAuthenticated, setIsAuthenticated, setUser}) {
   };
 
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/signin" replace />;
   }
 
   return (
