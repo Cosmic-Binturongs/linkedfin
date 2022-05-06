@@ -20,6 +20,7 @@ class GetUserProfileView(APIView):
   def get(self, request, format=None):
     try:
       user = self.request.user
+      ##return the user eg:eric
       username = user.username
       #admin name
       current_user = User.objects.get(id= user.id)
@@ -37,9 +38,9 @@ class UpdateUserProfileView(APIView):
       username = user.username
       
       data = self.request.data
-      bio = data['bio']
-      github = data['github']
-      image = data['image']
+      # bio = data['bio']
+      # github = data['github']
+      # image = data['image']
       # username = data['user']
 
       current_user = User.objects.get( id = user.id)
