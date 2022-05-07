@@ -1,6 +1,8 @@
 <div id="header" align="center">
   <h1>LinkedFin 🐬</h1>
-  <img width="200px" src="./images/Logo.png">
+  <a href="https://62703a71d6af6f0e6059ee6f--linkedfin.netlify.app/">
+    <img width="200px" src="./images/Logo.png">
+  </a>
 </div>
 
 <div id="about" align="center">
@@ -16,11 +18,11 @@
     <a href="https://github.com/KdoubleUs"><li>Kevin Wu</li></a>
     <a href="https://github.com/Mikey970"><li>Michael Delucia</li></a>
     <a href="https://github.com/ehlee95"><li>Eric Lee</li></a>
-    <a href=""><li>Chiu</li></a>
+    <a href="https://github.com/chiumz9"><li>Chiu</li></a>
     <a href="https://github.com/Iffat77"><li>Iffat Hossain</li></a>
     <a href="https://github.com/staceycsikos"><li>Stacey Csikos</li></a>
     <a href="https://github.com/Michel9510"><li>Michel Lizardo</li></a>
-    <a href=""><li>Brandon Neves</li></a>
+    <a href="https://github.com/sevennq86"><li>Brandon Neves</li></a>
     <a href="https://github.com/MannyNR"><li>Emmanuel Nunez</li></a>
     <a href="https://github.com/RaulJiminian"><li>Raul Jiminian</li></a>
   </ul>
@@ -52,11 +54,11 @@
   <a href="https://www.figma.com/file/g2vILOWXtLA8LL4xpOnG7x/Linkedfin?node-id=0%3A1">
     <img width="100px"src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg">
   </a>
-  <h2>Stylesheet</h2>  
+  <h2>Style Sheet</h2>  
   <a href="https://www.figma.com/file/Yl85Rf3zgYZ704P0kpAFFo/Linkedfin-stylesheet?node-id=0%3A1">
     <img width="100px"src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg">
   </a>
-  <h2>Wireframe/stylesheet Screenshots</h2>
+  <h2>Wireframe/Style Sheet Screenshots</h2>
   <h3>Landing Page/sign Up</h3>
   <img src="./wireframe/Sign-up-landing-page.png">
   <h3>Sign In</h3>
