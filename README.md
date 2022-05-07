@@ -19,7 +19,7 @@
     <a href=""><li>Chiu</li></a>
     <a href="https://github.com/Iffat77"><li>Iffat Hossain</li></a>
     <a href="https://github.com/staceycsikos"><li>Stacey Csikos</li></a>
-    <a href=""><li>Michel Lizardo</li></a>
+    <a href="https://github.com/Michel9510"><li>Michel Lizardo</li></a>
     <a href=""><li>Brandon Neves</li></a>
     <a href="https://github.com/MannyNR"><li>Emmanuel Nunez</li></a>
     <a href="https://github.com/RaulJiminian"><li>Raul Jiminian</li></a>
