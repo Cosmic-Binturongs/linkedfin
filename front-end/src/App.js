@@ -26,7 +26,7 @@ function App() {
             path="/"
             element={<Landing isAuthenticated={isAuthenticated} />}
           />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile user={user} />} />
           <Route path="/feed" element={<Feed />} />
           <Route
             path="/signin"
