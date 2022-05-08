@@ -5,7 +5,7 @@ Replace DB_NAME, DB_USER, DB_PASSWORD
 With values in .env
 */
 
-
+DROP DATABASE linkfin;
 CREATE DATABASE linkfin;
-CREATE USER linkfin_ga WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON DATABASE linkfin TO linkfin_ga;
+CREATE USER admin WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE linkfin TO admin;

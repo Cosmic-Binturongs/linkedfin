@@ -8,7 +8,6 @@ export default function CSRFToken() {
     let cookieValue = null;
     if (document.cookie && document.cookie !== "") {
       let cookies = document.cookie.split(";");
-      console.log(cookies);
       for (let i = 0; i < cookies.length; i++) {
         let cookie = cookies[i].trim();
         if (cookie.substring(0, name.length + 1) === name + "=") {

@@ -78,7 +78,6 @@ function Landing({ isAuthenticated }) {
 
       fetch("http://localhost:8000/accounts/register", options).then(
         response => {
-          console.log(response);
           setAccountCreated(true);
         }
       );

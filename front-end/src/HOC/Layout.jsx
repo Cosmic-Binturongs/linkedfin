@@ -33,7 +33,6 @@ export default function Layout({
         return response.json();
       })
       .then(data => {
-        console.log(data);
         if (data.error || data.isAuthenticated === "error") {
           setIsAuthenticated(false);
         } else if (data.isAuthenticated === "success") {

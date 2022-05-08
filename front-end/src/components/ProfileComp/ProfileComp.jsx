@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './profile-comp.css';
+import { useState, useEffect } from 'react';
 import image from '../../images/Github_icon.png';
+import './profile-comp.css';
+
+
 
 
 export default function ProfileComp({profile}) {
-
+ 
 
   return (
     <div className='profile-container'>
@@ -19,7 +22,7 @@ export default function ProfileComp({profile}) {
      <img className='github-img' src={image}/>
      {/* will try once user is added */}
      {/* <a className='profile-component-mailTo' href={`mailto:${profile.user.mail}`}>E-Mail</a> */}
-        
+    
     </div>
     </div>
   )

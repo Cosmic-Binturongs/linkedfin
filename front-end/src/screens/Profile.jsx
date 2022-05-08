@@ -2,26 +2,49 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProfileComp from "../components/ProfileComp/ProfileComp";
 import AddProjModal from "../components/AddProjModal/AddProjModal";
+import ProjectComp from "../components/ProjectComp/ProjectComp";
+import EditProjModal from "../components/EditProjModal/EditProjModal";
 import "./Profile.css";
 
-function Profile() {
-  const [showModal, setShowModal] = useState(false)
-  // using dummy data to test functionality
-  const [profile, setProfile] = useState({
-    bio: "I am a software engineer working for evilcorp",
-    github: "https://www.linkedin.com/",
-    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.inc.com%2Fjeff-steen%2Fgoogle-ceos-1-sentence-response-to-getting-called-out-by-employees-is-a-master-class-in-leadership.html&psig=AOvVaw25CDvsDLKrKrU97uM7IYNu&ust=1651711532549000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPi9tYvPxPcCFQAAAAAdAAAAABAE",
 
+function Profile({ user, projects, setToggle}) {
+  const [showModal, setShowModal] = useState(false)
+  // const [showEditModal, setShowEditModal] = useState(false)
+  const [userProjects, setUserProjects] = useState([]);
+
+  const [profile, setProfile] = useState({
+    bio: "",
+    github: "",
+    image: "",
   })
 
+  useEffect(() => {
+    if (user) {
+      setProfile({
+        bio: user.profile.bio,
+        github: user.profile.github,
+        image: user.profile.image,
+      })
+    }
+  }, [user])
 
+  useEffect(() => {
+    let userProjectsData = projects && user && projects.filter((project) => {
+      return project.profile_id === user.profile.id
+    }) 
+    setUserProjects(userProjectsData)
+  }, [projects])
 
   return (
     <div className='profile-screen-container'>
 
       <ProfileComp profile={profile} />
       <button id='add-proj-btn' onClick={() => setShowModal(true)}>Add Project</button>
-      {showModal ? <AddProjModal setShowModal={setShowModal} /> : null}
+      {showModal ? <AddProjModal setShowModal={setShowModal} profile_id={user.profile.id} setUserProjects={setUserProjects} /> : null}
+      {/* <button id='edit-proj-btn' onClick={() => setShowEditModal(true)}>Add Project</button> */}
+      {/* {showEditModal ? <EditProjModal setShowEditModal={setShowEditModal} profile_id={user.profile.id} setUserProjects={setUserProjects} /> : null} */}
+      
+      <ProjectComp setToggle={setToggle} projects={userProjects} user={user}/>
 
 
     </div>

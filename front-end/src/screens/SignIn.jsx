@@ -45,13 +45,11 @@ function SignIn({ isAuthenticated, setIsAuthenticated, setUser }) {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         fetch("http://localhost:8000/profile/user", userOptions)
           .then(response => {
             return response.json();
           })
           .then(data => {
-            console.log(data);
             setIsAuthenticated(true);
             setUser(data);
           });
