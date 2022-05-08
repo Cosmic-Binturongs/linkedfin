@@ -62,7 +62,9 @@ function SignIn({ isAuthenticated, setIsAuthenticated, setUser }) {
 
   return (
     <div className="signinContainer">
-      <h1 className="topText">Sign In</h1>
+      <div className="text-container">
+        <h1 className="topText">Sign In</h1>
+        </div>
       <form onSubmit={handleSubmit}>
         <CSRFToken />
         <div className="signinInput">
