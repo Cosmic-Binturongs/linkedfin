@@ -2,12 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProfileComp from "../components/ProfileComp/ProfileComp";
 import AddProjModal from "../components/AddProjModal/AddProjModal";
-import "./Profile.css";
 import ProjectComp from "../components/ProjectComp/ProjectComp";
+import EditProjModal from "../components/EditProjModal/EditProjModal";
+import "./Profile.css";
 
 
 function Profile({ user, projects, setToggle}) {
   const [showModal, setShowModal] = useState(false)
+  // const [showEditModal, setShowEditModal] = useState(false)
   const [userProjects, setUserProjects] = useState([]);
 
   const [profile, setProfile] = useState({
@@ -38,7 +40,10 @@ function Profile({ user, projects, setToggle}) {
 
       <ProfileComp profile={profile} />
       <button id='add-proj-btn' onClick={() => setShowModal(true)}>Add Project</button>
-      {showModal ? <AddProjModal setShowModal={setShowModal} profile_id={user.profile.id} setUserProjects={setUserProjects}/> : null}
+      {showModal ? <AddProjModal setShowModal={setShowModal} profile_id={user.profile.id} setUserProjects={setUserProjects} /> : null}
+      {/* <button id='edit-proj-btn' onClick={() => setShowEditModal(true)}>Add Project</button> */}
+      {/* {showEditModal ? <EditProjModal setShowEditModal={setShowEditModal} profile_id={user.profile.id} setUserProjects={setUserProjects} /> : null} */}
+      
       <ProjectComp setToggle={setToggle} projects={userProjects} user={user}/>
 
 

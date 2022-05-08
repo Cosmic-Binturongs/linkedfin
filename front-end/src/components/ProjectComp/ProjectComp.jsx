@@ -13,6 +13,7 @@ export default function ProjectComp({ projects, setToggle }) {
         "X-CSRFToken": Cookies.get("csrftoken"),
       },
       credentials: "include",
+      body: "",
     };
 
     fetch(`http://localhost:8000/projects/${id}/`, options)
@@ -41,7 +42,8 @@ export default function ProjectComp({ projects, setToggle }) {
               <p className="project-component-description">
                 {project.description}
               </p>
-              <button className="" onClick={() => handleClick(project.id)}>
+              <button className="poject-edit-comp">Edit</button>
+              <button className="project-delete-comp" onClick={() => handleClick(project.id)}>
                 Delete
               </button>
             </div>
