@@ -1,10 +1,9 @@
 import { useState } from "react";
-import ProjectComp from "../ProjectComp/ProjectComp";
 import CSRFToken from "../CSRFToken";
 import Cookies from "js-cookie";
 import "./AddProjModal.css";
 
-export default function Modal({ setShowModal, profile_id, setUserProjects }) {
+export default function Modal({ setShowModal, profile_id, setToggle }) {
 
   const [newProject, setNewProject] = useState({
     title: "",
@@ -44,10 +43,11 @@ export default function Modal({ setShowModal, profile_id, setUserProjects }) {
       })
       .then(data => {
         console.log(data)
-        setUserProjects(prev => ([
-          ...prev,
-          data
-        ]))
+        // setUserProjects(prev => ([
+        //   ...prev,
+        //   data
+        // ]))
+        setToggle(prev => !prev)
         setShowModal(prev => !prev)
       });
   };

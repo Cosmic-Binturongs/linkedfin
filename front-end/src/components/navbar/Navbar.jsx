@@ -33,6 +33,11 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
   const authLinks = (
     <Fragment>
       <li className="nav-item">
+        <NavLink id="profile" className="nav-link" to="/feed">
+          Feed
+        </NavLink>
+      </li>
+      <li className="nav-item">
         <NavLink id="profile"className="nav-link" to="/profile">
           Profile
         </NavLink>
@@ -47,6 +52,11 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
 
   const guestLinks = (
     <Fragment>
+      <li className="nav-item">
+        <NavLink id="profile" className="nav-link" to="/feed">
+          Feed
+        </NavLink>
+      </li>
       <li className="nav-item">
         <NavLink id="login" className="nav-link" to="/signin">
           Login

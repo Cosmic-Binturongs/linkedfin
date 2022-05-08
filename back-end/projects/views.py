@@ -116,7 +116,6 @@ class GetUsersView(APIView):
         users = UserSerializer(users, many=True)
         return Response(users.data)
 
-
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
