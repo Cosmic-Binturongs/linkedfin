@@ -1,4 +1,4 @@
-.project-card{
+/* .project-card{
   display: flex;
   width: 60vw;
   height: 20vh;
@@ -23,5 +23,23 @@
   height: 100%;
   width: 100%;
   align-self: flex-end;
+} */
+
+.project-container {
+  display: flex;
+  justify-content: center;
 }
 
+.project-component {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+  width: 60%;
+  height: 8rem;
+  margin-top: 2rem;
+  border: 2px solid #2a9df4;
+  border-radius: 1rem;
+  font-family: sans-serif;
+  padding: 1rem;
+}

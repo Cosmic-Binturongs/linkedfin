@@ -6,7 +6,7 @@ class User_profile(models.Model):
 
     bio = models.TextField(max_length=500)
     github = models.CharField(max_length=128)
-    image = models.ImageField(null=True,blank=True,  upload_to='blog_images')
+    image = models.CharField(max_length=500)
     user_id = models.OneToOneField(User, on_delete=models.CASCADE, null=False)
 
     def __str__(self):

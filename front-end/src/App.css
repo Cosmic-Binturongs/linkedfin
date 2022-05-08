@@ -61,7 +61,8 @@
   height: 55vh;
   width: 60vh;
   color: white;
-  background-color: rgb(145, 225, 245);
+  background-color: white;
+  
   margin-top: 0 auto;
   border: 2px #2a9df4 solid;
   border-radius: 5px;
@@ -71,7 +72,7 @@
 }
 .signinButton {
   display: flex;
-  margin-left: 12vh;
+  margin: 0 auto;
   height: 35px;
   width: 120px;
   border: #2a9df4 2px solid;
@@ -82,11 +83,18 @@
   align-items: center;
   justify-content: center;
 }
-
+.text-container{
+  
+}
 .topText {
-  margin-top: 55px;
+  padding-top: 5%;
+  height: 100%;
+  border-bottom: 2px #2a9df4 solid;
+  padding-bottom: 20px;
+  
   font-family: Helvetica-Bold;
-  color: #2a9df4;
+  color: white;
+  background-color: #2a9df4;
 }
 
 #textfield {
@@ -94,20 +102,30 @@
   padding-top: 7px;
 }
 .signinInput {
+  
   padding-top: 10%;
+ 
   display: flex;
   height: 150px;
   width: 400px;
-  padding-left: 18%;
-  border: 5px #2a9df4;
+  margin: 0 auto;
+ border-radius: 3px;
   row-gap: 30px;
   flex-direction: column;
+
 }
 
 input {
+  
   font-family: Helvetica;
   height: 150px;
   width: 300px;
   font-size: large;
   border: 1.5px solid #2a9df4;
+}
+.usernameField{
+  border: 2px #2a9df4 solid;
+}
+.passwordField{
+  border: 2px #2a9df4 solid;
 }

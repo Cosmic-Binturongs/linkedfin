@@ -33,12 +33,12 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
   const authLinks = (
     <Fragment>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/profile">
+        <NavLink id="profile"className="nav-link" to="/profile">
           Profile
         </NavLink>
       </li>
       <li className="nav-item">
-        <button className="nav-link" onClick={handleClick}>
+        <button id="logout" className="nav-link" onClick={handleClick}>
           Logout
         </button>
       </li>
@@ -48,7 +48,7 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
   const guestLinks = (
     <Fragment>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/signin">
+        <NavLink id="login" className="nav-link" to="/signin">
           Login
         </NavLink>
       </li>
@@ -59,12 +59,12 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
     <div className="nav-container">
       <div className="nav-logo">
         <Link to="/">
-          <img className=".nav-logo-img" src={img} />
+          <img className="nav-logo-img" src={img} />
         </Link>
         <h1 className="nav-logo-text">LinkedIn</h1>
       </div>
       <div className="nav-buttons">
-        <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
+        <ul className="login-button">{isAuthenticated ? authLinks : guestLinks}</ul>
       </div>
     </div>
   );
