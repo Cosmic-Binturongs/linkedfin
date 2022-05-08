@@ -1,23 +1,37 @@
-import './sidebar-styles.css'
+import './sidebar-style.css'
 
 export default function Sidebar() {
-  const person = {
+  const person = [{
     img: "https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg",
     name: "Tom",
-  }
-
+  },
+    {
+      img: "https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg",
+      name: "Tom",
+    },
+    {
+      img: "https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg",
+      name: "Tom",
+    },
+    {
+      img: "https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg",
+      name: "Tom",
+    },
+  ]
 
 
   return (
     <div className="sidebar-container">
-      <div className='sidebar-card'>
-        <div className="sidebar-image-container" >
-          <img className="sidebar-image" src={person.img} />
-        </div>
-        <div className="sidebar-name-container">
-          <h3>{person.name}</h3>
-        </div>
-      </div>
+      {person.map(
+        card => (
+          <div className="sidebar-card">
+            <img className="sidebar-card-image" src={card.img}/>
+            <div className="sidebar-card-name-container">
+              {card.name}
+            </div>
+          </div>
+        )
+      )}
     </div>
   )
 }

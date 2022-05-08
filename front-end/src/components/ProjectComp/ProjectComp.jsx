@@ -1,20 +1,55 @@
 import React from 'react'
+import './project-comp.css'
 
 
 
-export default function ProjectComp({project}) {
-
+export default function ProjectComp() {
+  const project = [
+    {
+      bio: "I am a software engineer working for evilcorp",
+      github: "https://www.linkedin.com/",
+      img: "https://i.ibb.co/yqcpF2y/Screen-Shot-2022-05-08-at-10-04-43-AM.png",
+    },
+    {
+      bio: "I am a software engineer working for evilcorp",
+      github: "https://www.linkedin.com/",
+      img: "https://i.ibb.co/yqcpF2y/Screen-Shot-2022-05-08-at-10-04-43-AM.png",
+    },
+    {
+      bio: "I am a software engineer working for evilcorp",
+      github: "https://www.linkedin.com/",
+      img: "https://i.ibb.co/yqcpF2y/Screen-Shot-2022-05-08-at-10-04-43-AM.png",
+    },
+    {
+      bio: "I am a software engineer working for evilcorp",
+      github: "https://www.linkedin.com/",
+      img: "https://i.ibb.co/yqcpF2y/Screen-Shot-2022-05-08-at-10-04-43-AM.png",
+    }
+  ]
 
 
 
   return (
-    
-      <div className='project-component'>
-        <h3 className='project-component-name'>{project.title}</h3>
-        <a className='project-component-github' href={`${project.github_link}`}>GitHub</a>
-        <h5 className='project-component-publish-date'>{project.publish_date} </h5>
-        <p className='project-component-description'>{project.description}</p>
-      </div>
-  
+
+    <div className='project-component'>
+      {project.map(card =>(
+        <div className="project-card">
+          <div className="project-card-content">
+            <div>
+              <img className="project-card-image"src={card.img}/>
+            </div>
+            <div className="project-card-bio">
+              <div>
+                {card.bio}
+              </div>
+              <div className="project-card-links">
+                {card.github}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
   )
 }

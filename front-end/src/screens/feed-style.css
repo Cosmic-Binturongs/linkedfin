@@ -1,9 +1,8 @@
 .feed-container {
   display: flex;
 }
-
 .projects-container {
   width: 70vw;
   height: 100vh;
-  border: 1px solid #2A9DF4;
 }
+

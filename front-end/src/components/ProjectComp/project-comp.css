@@ -1,0 +1,27 @@
+.project-card{
+  display: flex;
+  width: 60vw;
+  height: 20vh;
+  margin: 5% 10%;
+  background-color: lightblue;
+  border-radius: 5%;
+}
+.project-card-content{
+  display: flex;
+  margin: 2% 2%;
+}
+.project-card-image{
+  width: 10vw;
+  height: 10vh;
+}
+.project-card-bio{
+  width: 40vw;
+  height: 15vh;
+}
+.project-card-links{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-self: flex-end;
+}
+
