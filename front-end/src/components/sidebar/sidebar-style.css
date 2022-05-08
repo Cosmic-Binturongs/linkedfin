@@ -1,0 +1,36 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  width: 20vw;
+  
+}
+
+.sidebar-card {
+  display: flex;
+  width: 20vw;
+  height: 15vh;
+  display: flex;
+  margin-top:8%;
+  margin-left: 15%;
+  background-color: lightblue;
+  border-radius: 8%;
+}
+
+.sidebar-card-image{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+  height: 80%;
+  border-radius: 50%;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+
+.sidebar-card-name-container{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-right: 5%;
+}

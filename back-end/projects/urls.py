@@ -1,6 +1,6 @@
 from .views import SignupView, GetCSRFToken, LoginView, LogoutView, CheckAuthenticatedView, DeleteProjectView, GetUsersView, ProjectViewSet
 from rest_framework import routers
-from django.urls import path, include
+from django.urls import path
 
 router= routers.DefaultRouter()
 router.register(r'project', ProjectViewSet)

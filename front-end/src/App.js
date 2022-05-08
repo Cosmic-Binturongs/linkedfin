@@ -34,8 +34,8 @@ function App() {
             path="/"
             element={<Landing isAuthenticated={isAuthenticated} />}
           />
-          <Route path="/profile" element={isAuthenticated ? <Profile setToggle={setToggle} projects={projects} user={user} /> : <Navigate to="/" />} />
-          <Route path="/feed" element={<Feed />} />
+          <Route path="/profile" element={isAuthenticated ? <Profile setToggle={setToggle} projects={projects} user={user} setUser={setUser}/> : <Navigate to="/" />} />
+          <Route path="/feed" element={<Feed projects={projects}/>} />
           <Route
             path="/signin"
             element={

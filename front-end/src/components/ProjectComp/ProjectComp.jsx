@@ -1,9 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import "./project-comp.css";
 import Cookies from "js-cookie";
 
-export default function ProjectComp({ projects, setToggle }) {
+export default function ProjectComp({ projects, setToggle, setProjectEditModal, setProject }) {
   const handleClick = (id) => {
     let options = {
       method: "DELETE",
@@ -42,7 +41,10 @@ export default function ProjectComp({ projects, setToggle }) {
               <p className="project-component-description">
                 {project.description}
               </p>
-              <button className="poject-edit-comp">Edit</button>
+              <button id='edit-proj-btn' onClick={() => {
+                setProject(project)
+                setProjectEditModal(true)
+              }}>Edit Project</button>
               <button className="project-delete-comp" onClick={() => handleClick(project.id)}>
                 Delete
               </button>

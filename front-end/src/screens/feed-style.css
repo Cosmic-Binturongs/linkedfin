@@ -1,0 +1,7 @@
+.feed-container {
+  display: flex;
+}
+.projects-container {
+  width: 70vw;
+  height: 100vh;
+}

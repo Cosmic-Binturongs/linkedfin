@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .serializers import ProfileSerializer, UserSerializer
 from django.contrib.auth.models import User
 from .models import User_profile
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User_profile
@@ -46,9 +46,18 @@ class UpdateUserProfileView(APIView):
 
       current_user = User.objects.get( id = user.id)
       
-      updatedProfile = User_profile.objects.filter(user_id = current_user).update(bio=data['bio'], github=data['github'], image=['image'])
+      updatedProfile = User_profile.objects.filter(user_id = current_user).update(bio=data['bio'], github=data['github'], image=data['image'])
       user_profileval = User_profile.objects.get(user_id = user)
       user_profile = ProfileSerializer(user_profileval)
       return Response({'profile': user_profile.data, 'username': str(username)})
     except:
       return Response({'error': "Something went wrong when updating profile"})
+
+class GetUserProfilesView(APIView):
+  permission_classes = (permissions.AllowAny,)
+
+  def get(self, request, format=None):
+      profiles = User_profile.objects.all()
+
+      profiles = ProfileSerializer(profiles, many=True)
+      return Response(profiles.data)
