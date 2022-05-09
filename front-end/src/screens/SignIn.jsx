@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import CSRFToken from "../components/CSRFToken";
 import Cookies from "js-cookie";
+import "../style/signin.css";
 
 function SignIn({ isAuthenticated, setIsAuthenticated, setUser }) {
   const [formData, setFormData] = useState({
@@ -64,34 +65,30 @@ function SignIn({ isAuthenticated, setIsAuthenticated, setUser }) {
     <div className="signinContainer">
       <div className="text-container">
         <h1 className="topText">Sign In</h1>
-        </div>
-      <form onSubmit={handleSubmit}>
+      </div>
+      <form onSubmit={handleSubmit} className="signin-form">
         <CSRFToken />
-        <div className="signinInput">
-          <input
-            value={formData.username}
-            onChange={handleChange}
-            name="username"
-            id="textfield"
-            className="usernameField"
-            type="text"
-            placeholder="Username"
-            required
-          ></input>
-          <input
-            id="textfield"
-            className="passwordField"
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={formData.password}
-            placeholder="Password"
-            required
-          ></input>
-          <div>
-            <button className="signinButton">Sign in</button>
-          </div>
-        </div>
+        <input
+          value={formData.username}
+          onChange={handleChange}
+          name="username"
+          id="textfield"
+          className="signinField"
+          type="text"
+          placeholder="Username"
+          required
+        ></input>
+        <input
+          id="textfield"
+          className="signinField"
+          type="password"
+          name="password"
+          onChange={handleChange}
+          value={formData.password}
+          placeholder="Password"
+          required
+        ></input>
+        <button className="signinButton">Sign in</button>{" "}
       </form>
     </div>
   );

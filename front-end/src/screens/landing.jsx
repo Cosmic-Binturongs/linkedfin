@@ -32,7 +32,7 @@ const ColumnRight = styled.div`
   justify-item: flex-start;
 `;
 const Button = styled(motion.button)`
-  color: blue;
+  color: #4056a1;
   width: 12em;
   height: 3em;
   border-radius: 15px;
@@ -114,7 +114,7 @@ function Landing({ isAuthenticated }) {
       <Container>
         <ColumnLeft>
           <div className="input-container">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="landing-form">
               <CSRFToken />
               <motion.input
                 placeholder="Full Name"

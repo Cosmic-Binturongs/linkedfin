@@ -20,7 +20,7 @@
   width: 100%;
   text-align: center;
   padding-bottom: 1em;
-  color: blue;
+  color: #4056a1;
   font-weight: 700;
   font-size: 0.7em;
   letter-spacing: 0.3em;
@@ -43,4 +43,10 @@
 .signup-button:hover {
   background-position: left bottom;
   transition: ease-out 0.3s;
+}
+.landing-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

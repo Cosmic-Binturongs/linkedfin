@@ -1,26 +1,34 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 // import Sidebar from '../components/sidebar/Sidebar.jsx'
-import './feed-style.css'
-
+import "./feed-style.css";
+import { motion } from "framer-motion";
+import Ads from "../components/ads";
 export default function Feed({ projects }) {
-  const [profiles, setProfiles] = useState([])
+  const [profiles, setProfiles] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/profile/all")
       .then(res => res.json())
-      .then((data) => {
-        setProfiles(data)
-      })
-    
-  }, [])
+      .then(data => {
+        setProfiles(data);
+      });
+  }, []);
 
   return (
-    <div className='feed-container'>
-      <div className='projects-container'>
-      {projects &&
-        projects.map((project) => (
-          <div key={project.id} className="project-container">
-            <div className="project-component">
+    <div className="feed-container">
+      <h1 className="feed-title"> LINKFIN PROJECT</h1>
+      <div className="projects-container">
+        {projects &&
+          projects.map(project => (
+            <motion.div
+              key={project.id}
+              className="project-container"
+              whileHover={{ x: -30, y: -20, boxShadow: "10px 5px 50px black" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* <div className="project-component"> */}
               <h3 className="project-component-name">{project.title}</h3>
               <a
                 className="project-component-github"
@@ -34,16 +42,26 @@ export default function Feed({ projects }) {
               <p className="project-component-description">
                 {project.description}
               </p>
-            </div>
-            {profiles.filter((profile) => {
-              return profile.id === project.profile_id;
-            }).map((userProfile, index) => (
-              <img key={index} src={userProfile.image} height="50px" width="50px"/>
-            ))}
-          </div>
-        ))}
+              <div className="owner-picture">
+                {profiles
+                  .filter(profile => {
+                    return profile.id === project.profile_id;
+                  })
+                  .map((userProfile, index) => (
+                    <img
+                      key={index}
+                      src={userProfile.image}
+                      height="100px"
+                      width="100px"
+                    />
+                  ))}
+              </div>
+              {/* </div> */}
+            </motion.div>
+          ))}
       </div>
+      <Ads className="img-container" />
       {/* <Sidebar /> */}
     </div>
-  )
+  );
 }
