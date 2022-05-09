@@ -50,3 +50,7 @@
   justify-content: center;
   align-items: center;
 }
+.footersec {
+  position: absolute;
+  bottom: 0;
+}

@@ -30,7 +30,7 @@
   width: 1.5rem;
 } */
 .profile-screen-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -38,19 +38,24 @@
   border-style: solid;
   position: relative;
   top: 15%;
-  width: 30em;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60em;
   display: flex;
   flex-direction: column;
   margin-left: 1em;
   padding: 3em;
   border-radius: 5px;
   height: 12em;
+  background-color: #c0e4ff;
 
   /* background-color: yellow; */
 }
 .project-container {
   position: relative;
-  height: 8em;
+  height: 15em;
+  padding: 4em;
+  color: black;
 
   margin: 1.3em 0 0 5em;
   width: 45em;
@@ -74,6 +79,7 @@
   position: relative;
   height: 50em;
   top: 20%;
+  background: #e2d1c3;
 }
 .profile-component-image {
   float: right;
@@ -102,8 +108,9 @@
   font-size: 1.2em;
   color: #4056a1;
 }
-.project-component-name {
+.ent-name {
   margin-bottom: 1em;
+  color: black;
 }
 .project-component-github {
   text-decoration: none;
@@ -117,6 +124,7 @@
   left: 20%;
   padding: 1.2em;
   border-radius: 5px;
+  background-color: #c0e4ff;
 }
 .setofimages {
   display: flex;
@@ -149,6 +157,7 @@
   margin-bottom: 10px;
 }
 .feed-container {
+  background-color: #e2d1c3;
   width: 100vw;
 }
 .nav-buttons ul li {

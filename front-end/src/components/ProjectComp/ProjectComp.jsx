@@ -33,7 +33,7 @@ export default function ProjectComp({
           <div key={project.id}>
             <motion.div
               className="projects"
-              whileHover={{ x: -30, y: -20, boxShadow: "10px 5px 50px black" }}
+              whileHover={{ x: -15, y: -10, boxShadow: "10px 5px 50px black" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}

@@ -18,12 +18,13 @@
   height: 100vh;
 }
 .feed-title {
-  width: 5em;
+  width: 9em;
+  color: black;
   margin-left: 4em;
   position: relative;
 }
 .project-container {
-  background-color: #4056a1;
+  background-color: #c0e4ff;
 }
 .buttons {
   padding: 0.6em;
@@ -40,4 +41,21 @@
 #add-projects:hover {
   background-color: #4056a1;
   color: white;
+}
+
+.projectprofile-img {
+  /* float: right;
+  position: relative; */
+  position: absolute;
+  top: -87px;
+  left: -105px;
+}
+
+.owner-picture {
+  position: relative;
+  float: right;
+  margin: auto;
+  /* position: absolute;
+  top: -100px;
+  left: -105px; */
 }

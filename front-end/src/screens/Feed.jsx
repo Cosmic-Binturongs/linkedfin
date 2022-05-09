@@ -53,6 +53,7 @@ export default function Feed({ projects }) {
                       src={userProfile.image}
                       height="100px"
                       width="100px"
+                      className="projectprofile-img"
                     />
                   ))}
               </div>

@@ -1,15 +1,16 @@
 :root {
   --BlueFin: #2a9df4;
 }
-
+html {
+  background-color: #e2d1c3;
+}
 .app {
   height: 100vh;
   width: 100vw;
 }
-html {
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-  height: 100vh;
-  width: 100vw;
+body {
+  background: linear-gradient(#fdfcfb, #e2d1c3);
+  background-repeat: no-repeat;
 }
 * {
   padding: 0;
@@ -168,5 +169,5 @@ input {
   color: white;
 }
 .project-component-github {
-  color: white;
+  color: black;
 }

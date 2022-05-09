@@ -14,7 +14,7 @@ export default function ProfileComp({ profile, setProfileModal, username }) {
       <img className="profile-component-image" src={profile.image} />
       <p className="profile-component-bio">{profile.bio}</p>
       <a className="profile-component-github" href={`${profile.github}`}>
-        GitHub
+        Personal GitHub
       </a>
       <img className="github-img" src={image} height={20} width={20} />
       <div>

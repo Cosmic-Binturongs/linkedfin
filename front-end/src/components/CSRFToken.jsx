@@ -19,16 +19,6 @@ export default function CSRFToken() {
     return cookieValue;
   };
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       await api.get("/accounts/csrf_cookie");
-  //       setcsrftoken(getCookie('csrftoken'));
-  //     } catch (error) {
-  //       console.error(error)
-  //     }
-  //   }
-
   useEffect(() => {
     fetch("http://localhost:8000/accounts/csrf_cookie", {
       credentials: "include",

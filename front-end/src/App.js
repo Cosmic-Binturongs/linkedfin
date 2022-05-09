@@ -16,11 +16,10 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:8000/projects/")
       .then(res => res.json())
-      .then((data) => {
-        setProjects(data)
-      })
-    
-  }, [user, toggle])
+      .then(data => {
+        setProjects(data);
+      });
+  }, [user, toggle]);
 
   return (
     <div className="app">
@@ -28,14 +27,29 @@ function App() {
         isAuthenticated={isAuthenticated}
         setIsAuthenticated={setIsAuthenticated}
         setUser={setUser}
+        className="hoc"
       >
         <Routes>
           <Route
             path="/"
             element={<Landing isAuthenticated={isAuthenticated} />}
           />
-          <Route path="/profile" element={isAuthenticated ? <Profile setToggle={setToggle} projects={projects} user={user} setUser={setUser}/> : <Navigate to="/" />} />
-          <Route path="/feed" element={<Feed projects={projects}/>} />
+          <Route
+            path="/profile"
+            element={
+              isAuthenticated ? (
+                <Profile
+                  setToggle={setToggle}
+                  projects={projects}
+                  user={user}
+                  setUser={setUser}
+                />
+              ) : (
+                <Navigate to="/" />
+              )
+            }
+          />
+          <Route path="/feed" element={<Feed projects={projects} />} />
           <Route
             path="/signin"
             element={
