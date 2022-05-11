@@ -1,4 +1,4 @@
-.profile-container{
+/* .profile-container{
   display: flex;
   justify-content: center;
   
@@ -28,4 +28,145 @@
 .github-img{
   height: 1.5rem;
   width: 1.5rem;
+} */
+.profile-screen-container {
+  height: 100%;
+  width: 100%;
 }
+
+.profilecomp {
+  border-style: solid;
+  position: relative;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60em;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  padding: 3em;
+  border-radius: 5px;
+  height: 12em;
+  background-color: #c0e4ff;
+
+  /* background-color: yellow; */
+}
+.project-container {
+  position: relative;
+  height: 15em;
+  padding: 4em;
+  color: black;
+
+  margin: 1.3em 0 0 5em;
+  width: 45em;
+  /* left: 20%; */
+  border-style: solid;
+  padding: 1em;
+}
+.project-component {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  width: 40em;
+  padding: 1.4em;
+}
+.profile-projects {
+  position: relative;
+}
+.personal-projects {
+  position: relative;
+  height: 50em;
+  top: 20%;
+  background: #e2d1c3;
+}
+.profile-component-image {
+  float: right;
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+.nav-buttons {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5em;
+}
+.name-heading {
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+.profile-component-github {
+  text-decoration: none;
+}
+.spanText {
+  font-size: 1.2em;
+  color: #4056a1;
+}
+.ent-name {
+  margin-bottom: 1em;
+  color: black;
+}
+.project-component-github {
+  text-decoration: none;
+}
+.projects {
+  margin-bottom: 1em;
+  border-style: solid;
+  width: 50em;
+  height: 8em;
+  position: relative;
+  left: 20%;
+  padding: 1.2em;
+  border-radius: 5px;
+  background-color: #c0e4ff;
+}
+.setofimages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: center; */
+  position: absolute;
+  width: 20em;
+  height: fit-content;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 2em;
+  margin-right: 1em;
+  margin-bottom: 10em;
+  background-color: #c5cbe3;
+}
+.news {
+  position: relative;
+  border-style: solid;
+  width: 15em;
+  padding: 2em;
+  /* margin-right: 100em; */
+  line-height: 2em;
+  margin-bottom: 0.5em;
+}
+.ads {
+  margin-bottom: 10px;
+}
+.feed-container {
+  background-color: #e2d1c3;
+  width: 100vw;
+}
+.nav-buttons ul li {
+  list-style: none;
+}
+
+/* #logout {
+  margin-bottom: 1em;
+} */
+/* .edit-profilebtn {
+
+} */

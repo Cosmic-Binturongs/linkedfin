@@ -1,7 +1,17 @@
 :root {
   --BlueFin: #2a9df4;
 }
-
+html {
+  background-color: #e2d1c3;
+}
+.app {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  background: linear-gradient(#fdfcfb, #e2d1c3);
+  background-repeat: no-repeat;
+}
 * {
   padding: 0;
   margin: 0;
@@ -30,7 +40,7 @@
   width: 100%;
   text-align: center;
   padding-bottom: 1em;
-  color: blue;
+  color: #4056a1;
   font-weight: 700;
   font-size: 0.7em;
   letter-spacing: 0.3em;
@@ -52,18 +62,17 @@
 
 /*Signin Style */
 
-.signinContainer {
-  margin-top: 10vh;
-  justify-content: center;
-  text-align: center;
+/* .signinContainer { */
+/* margin-top: 10vh; */
+/* justify-content: center; */
+/* text-align: center;
   margin-left: auto;
   margin-right: auto;
   height: 55vh;
   width: 60vh;
   color: white;
   background-color: white;
-  
-  margin-top: 0 auto;
+
   border: 2px #2a9df4 solid;
   border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
@@ -72,6 +81,8 @@
 }
 .signinButton {
   display: flex;
+  position: relative;
+  top: 0;
   margin: 0 auto;
   height: 35px;
   width: 120px;
@@ -83,49 +94,80 @@
   align-items: center;
   justify-content: center;
 }
-.text-container{
-  
+.text-container {
+  top: 0;
+  height: 3em;
+  background-color: blue;
 }
 .topText {
-  padding-top: 5%;
-  height: 100%;
-  border-bottom: 2px #2a9df4 solid;
-  padding-bottom: 20px;
-  
-  font-family: Helvetica-Bold;
-  color: white;
-  background-color: #2a9df4;
-}
+  margin-bottom: 10em;
 
+  top: 0;
+}
 #textfield {
   padding-bottom: 7px;
   padding-top: 7px;
 }
 .signinInput {
-  
   padding-top: 10%;
- 
+
   display: flex;
   height: 150px;
   width: 400px;
   margin: 0 auto;
- border-radius: 3px;
+  border-radius: 3px;
   row-gap: 30px;
   flex-direction: column;
-
 }
 
 input {
-  
   font-family: Helvetica;
   height: 150px;
   width: 300px;
   font-size: large;
   border: 1.5px solid #2a9df4;
 }
-.usernameField{
+.usernameField {
   border: 2px #2a9df4 solid;
 }
-.passwordField{
+.passwordField {
   border: 2px #2a9df4 solid;
+} */
+
+/* kw sign in style*/
+.signinContainer {
+  height: 30em;
+  /* border-style: solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signinField {
+  border-radius: solid;
+  margin-top: 1em;
+}
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+}
+.signinButton {
+  width: 15em;
+  border-radius: 2px;
+  padding: 0.5em;
+  margin-top: 1em;
+}
+.topText {
+  margin-bottom: 0.5em;
+}
+.signinButton:hover {
+  background-color: #2a9df4;
+  transform: scale(1.2);
+  transition: ease-in-out 200ms;
+  color: white;
+}
+.project-component-github {
+  color: black;
 }

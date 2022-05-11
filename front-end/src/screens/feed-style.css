@@ -1,7 +1,61 @@
 .feed-container {
-  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin-top: 10em;
+  position: relative;
 }
 .projects-container {
-  width: 70vw;
+  color: white;
+
+  /* background-color: yellow; */
+}
+
+.projects-container {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  flex-direction: column;
+  width: 100vw;
   height: 100vh;
+}
+.feed-title {
+  width: 9em;
+  color: black;
+  margin-left: 4em;
+  position: relative;
+}
+.project-container {
+  background-color: #c0e4ff;
+}
+.buttons {
+  padding: 0.6em;
+  margin-right: 0.5em;
+}
+#add-projects {
+  padding: 0.5em;
+  width: 10em;
+}
+.buttons:hover {
+  background-color: #4056a1;
+  color: white;
+}
+#add-projects:hover {
+  background-color: #4056a1;
+  color: white;
+}
+
+.projectprofile-img {
+  /* float: right;
+  position: relative; */
+  position: absolute;
+  top: -87px;
+  left: -105px;
+}
+
+.owner-picture {
+  position: relative;
+  float: right;
+  margin: auto;
+  /* position: absolute;
+  top: -100px;
+  left: -105px; */
 }

@@ -1,5 +1,7 @@
+from . import views
+from rest_framework import routers
 from django.urls import path
-from .views import GetUserProfileView, UpdateUserProfileView, GetUserProfilesView
+from .views import GetUserProfilesView, GetUserProfileView, UpdateUserProfileView
 
 urlpatterns = [
     path('user', GetUserProfileView.as_view()),

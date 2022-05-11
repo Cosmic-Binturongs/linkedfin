@@ -1,13 +1,13 @@
-
+/* 
 
 .profile-screen-container{
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
-#add-proj-btn{
+/* #add-proj-btn{
   align-self: center;
   cursor: pointer;
   text-align: center;
@@ -21,4 +21,4 @@
   border: 1px solid var(--BlueFin);
   font-family: 'Exo 2', sans-serif;
   border-radius: 8px;
-}
+} */

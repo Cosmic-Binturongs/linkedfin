@@ -1,4 +1,5 @@
-input, select {
+input,
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -8,55 +9,57 @@ input, select {
   box-sizing: border-box;
 }
 
-.modal-main{
+.modal-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-.add-proj-modal-back{
-    display: flex;
-    justify-content: center;
-    height: 50vh;
-    width: 35vw;
-    border-radius: 1rem;
-    background-color: #eff0f0;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-
+.add-proj-modal-back {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  width: 50em;
+  border-radius: 3px;
+  background-color: #eff0f0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
-.close-container{
+.close-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
+  position: relative;
+  margin-bottom: 20em;
 }
 
-.close-btn{
+.close-btn {
+  position: relative;
   background-color: transparent;
   border: none;
-  cursor:  pointer;
+  cursor: pointer;
   font-size: 1.8rem;
   color: var(--BlueFin);
-  padding: .2rem;
+  padding: 0.2rem;
   padding-bottom: 7rem;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  /* margin-left: 20px;
+  margin-bottom: 30em; */
 }
 
-.modal-container{
+.modal-container {
   display: flex;
   justify-content: center;
   /* align-items: center; */
   height: 40vh;
+  width: 30em;
 }
 
-.add-proj-form{
+.add-proj-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,19 +68,19 @@ input, select {
   padding-left: 1.6rem;
 }
 
-.proj-form-btn{
+.proj-form-btn {
   align-self: center;
   cursor: pointer;
   text-align: center;
   justify-content: center;
-  font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
   font-size: 1rem;
   margin-right: 20px;
   margin-top: 20px;
-  padding: .8rem;
+  padding: 0.8rem;
   width: 8.5rem;
   height: 3rem;
   border: 1px solid var(--BlueFin);
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   border-radius: 8px;
 }
