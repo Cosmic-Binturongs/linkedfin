@@ -148,6 +148,7 @@ function Landing({ isAuthenticated }) {
                 animate="visible"
                 transition={{ duration: 1 }}
                 name="password"
+                type="password"
                 onChange={handleChange}
                 value={formData.password}
                 required
@@ -160,6 +161,7 @@ function Landing({ isAuthenticated }) {
                 animate="visible"
                 transition={{ duration: 1 }}
                 name={"re_password"}
+                type="password"
                 onChange={handleChange}
                 value={formData.re_password}
                 required
